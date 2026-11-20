@@ -1,0 +1,25 @@
+# Setup
+- Install Node.js.
+- Run `npm install` to install all dependencies.
+
+# Configure the Config File
+- Change the root login password to a strong, unique password. The password will be automatically hashed when you run the setup.
+
+# Restrict Dashboard Access (Optional)
+If you want to make the dashboard accessible only through a private network:
+- Change `Access` to an IP address that is allowed to access the dashboard.
+
+# Configure Environment Variables
+Don't worry, I've got you! :)
+
+`Encryption_Key` and `Argon2_Pepper_Secret` will be automatically generated and added if they don't already exist.
+
+# IMPORTANT
+
+**Before deploying your WAF to the public internet:**
+- Make sure the server responds correctly.
+- Make sure the server is listening on the configured port.
+- Configure the Linux firewall to ensure that incoming traffic passes through the Web Application Firewall (WAF) before reaching your web application.
+
+**Additionally (Recommended):**
+- Avoid using `.env` files in production. Instead, use a dedicated secrets management solution, such as HashiCorp Vault, to securely store and manage sensitive information.

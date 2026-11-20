@@ -1,0 +1,14 @@
+# Root Login
+Dashboard:
+Username: "root"
+Password: "password" # Password will be autoamticly be hashed once you run the application.
+Access: '0.0.0.0/0' # This will put your dashboard behind a private network to protect your dashboard from bots trying login attempt
+
+# SSL/TLS 
+# This will encrypt traffic in transit
+CERT: "/etc/ssl/certs/ssl-cert.pem" 
+Private: "/etc/ssl/private/ssl-cert.key"
+
+# Destination
+Orgin: "203.0.113.47"
+Port: 4646
